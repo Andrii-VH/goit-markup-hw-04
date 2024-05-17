@@ -311,6 +311,11 @@ body {
 }
 .portfolio-item {
   width: calc((100% - 48px) / 3);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .portfolio-title {
   font-weight: 700;
@@ -338,7 +343,7 @@ body {
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: #4d5ae5;
-  padding: 32px 40px;
+  padding: 40px 32px;
   overflow: auto;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -376,7 +381,10 @@ body {
 }
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
+}
+.page-footer-link {
+  margin-right: 120px;
 }
 .footer-link {
   font-family: "Raleway", sans-serif;
@@ -418,6 +426,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #ffffff;
+  margin-bottom: 16px;
 }
 .footer-list-social {
   display: flex;
@@ -425,7 +434,6 @@ body {
   align-items: center;
   column-gap: 16px;
   line-height: 0;
-  margin-top: 16px;
 }
 .footer-item-icon {
   fill: #f4f4fd;
@@ -440,6 +448,7 @@ body {
   background-color: #4d5ae5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-list-social-bgd:hover {
+.footer-list-social-bgd:hover,
+.footer-list-social-bgd:focus {
   background-color: #31d0aa;
 }
